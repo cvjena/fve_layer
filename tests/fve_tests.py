@@ -2,10 +2,8 @@ import abc
 import chainer
 import numpy as np
 
-from chainer import functions as F
 from cyvlfeat.fisher import fisher
 from cyvlfeat.gmm import cygmm
-from cyvlfeat.gmm import gmm
 
 from fve_layer.backends.chainer.links import FVELayer
 from fve_layer.backends.chainer.links import FVELayer_noEM

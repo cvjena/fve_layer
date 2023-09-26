@@ -7,7 +7,7 @@ import unittest
 
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from tests import *
+from tests import *  # noqa: E402 E403
 
 logging.disable(logging.CRITICAL)
 unittest.main()

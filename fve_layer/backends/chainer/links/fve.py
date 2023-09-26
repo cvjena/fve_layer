@@ -2,7 +2,6 @@ import abc
 import chainer
 
 from chainer import functions as F
-from chainer import links as L
 
 from fve_layer.backends.chainer.links.gmm import GMMLayer
 from fve_layer.backends.chainer.links.gmm import GMMMixin

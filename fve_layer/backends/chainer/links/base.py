@@ -130,9 +130,11 @@ class BaseEncodingLayer(link.Link, abc.ABC):
 
 	@promote_x_dtype
 	def soft_assignment(self, x):
+		""" computes the probability """
 		return F.exp(self.log_soft_assignment(x))
 
 	def log_soft_assignment(self, x):
+		""" computes the log-probability """
 
 		_log_proba, _w = self.log_proba(x, weighted=False)
 		_log_wu = _log_proba + F.log(_w)
@@ -170,6 +172,7 @@ class BaseEncodingLayer(link.Link, abc.ABC):
 		return _log_proba, _w
 
 	def log_proba(self, x, weighted=False, *args, **kwargs):
+		""" computes the log-likelihood """
 
 		_log_proba, _w = self._log_proba_intern(x, *args, **kwargs)
 
@@ -180,6 +183,7 @@ class BaseEncodingLayer(link.Link, abc.ABC):
 		return _log_proba, _w
 
 	def proba(self, *args, **kwargs):
+		""" computes the likelihood """
 		_log_proba, _w = self.log_proba(*args, **kwargs)
 		return F.exp(_log_proba), _w
 

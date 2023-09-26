@@ -3,7 +3,6 @@ import chainer
 import numpy as np
 
 from chainer import functions as F
-from chainer import initializers
 from chainer.backends import cuda
 
 from fve_layer.backends.chainer.links.base import BaseEncodingLayer

@@ -3,7 +3,7 @@
 Author: Dimitri Korsch
 
 
-## Licence
+## License
 This work is licensed under a [GNU Affero General Public License][agplv3].
 
 [![AGPLv3][agplv3-image]][agplv3]

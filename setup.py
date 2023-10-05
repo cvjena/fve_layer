@@ -3,7 +3,8 @@
 from setuptools import setup, find_packages
 
 import fve_layer
-install_requires = [line.strip() for line in open("requirements.txt").readlines()]
+install_requires = [line.strip() for line in open("requirements.txt")
+	if not (line.startswith("-") or line.startswith("#"))]
 
 setup(
 	name='fve_layer',
